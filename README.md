@@ -35,10 +35,6 @@ npm install
 npm run dev
 ```
 
-## Link GitHub Pages
-
-[Around the U.S.](https://github.com/bluejono/web_project_around_auth)
-
 ## Demonstração
 
 > Acesse o link acima para visualizar o projeto em produção.
