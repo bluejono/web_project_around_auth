@@ -82,13 +82,6 @@ class Api {
     });
   }
 
-  updateAvatar(avatar) {
-    return this._request("/users/me/avatar", {
-      method: "PATCH",
-      body: { avatar },
-    });
-  }
-
   setUserAvatar(data) {
     return this._request("/users/me/avatar", {
       method: "PATCH",

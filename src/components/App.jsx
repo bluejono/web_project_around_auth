@@ -35,7 +35,7 @@ function App() {
         })
         .then(([userData, cardsData]) => {
           setCurrentUser(userData);
-          setCards(cardsData);
+          setCards(Array.isArray(cardsData) ? cardsData : []);
         })
         .catch((error) => {
           console.error("Token inválido:", error);
@@ -52,6 +52,14 @@ function App() {
           localStorage.setItem("jwt", token);
           setIsLoggedIn(true);
           setUserEmail(email);
+          return Promise.all([api.getUserInfo(), api.getInitialCards()]);
+        }
+      })
+      .then((results) => {
+        if (results) {
+          const [userData, cardsData] = results;
+          setCurrentUser(userData);
+          setCards(Array.isArray(cardsData) ? cardsData : []);
         }
       })
       .catch((error) => {

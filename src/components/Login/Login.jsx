@@ -38,12 +38,12 @@ function Login({ onLogin }) {
               onChange={(event) => setPassword(event.target.value)}
               required
             />
+            <button className="auth__button" type="submit">
+              Entrar
+            </button>
           </form>
         </div>
         <div className="auth__footer">
-          <button className="auth__button" type="submit" onClick={handleSubmit}>
-            Entrar
-          </button>
           <p className="auth__link-text">
             Ainda não é membro?{" "}
             <Link className="auth__link" to="/signup">

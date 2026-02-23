@@ -112,6 +112,10 @@
     justify-content: space-between;
   }
 
+  .page_auth .header::after {
+    display: none;
+  }
+
   .page_auth .header__logo {
     width: 173px;
     height: 33px;

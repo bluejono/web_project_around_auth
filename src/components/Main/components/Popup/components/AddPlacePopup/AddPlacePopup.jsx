@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { CurrentUserContext } from "../../../../../../contexts/CurrentUserContext";
 
-export default function NewCard() {
+export default function AddPlacePopup() {
   const userContext = useContext(CurrentUserContext);
   const { handleAddCard } = userContext;
 

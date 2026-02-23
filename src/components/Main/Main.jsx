@@ -4,9 +4,9 @@ import plusIcon from "../../assets/plus-compressed.png";
 import userPic from "../../assets/user-pic.jpg";
 import Card from "./components/Card/Card";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import EditImage from "./components/Popup/components/EditImage/EditImage";
-import EditProfile from "./components/Popup/components/EditProfile/EditProfile";
-import NewCard from "./components/Popup/components/NewCard/NewCard";
+import EditAvatarPopup from "./components/Popup/components/EditAvatarPopup/EditAvatarPopup";
+import EditProfilePopup from "./components/Popup/components/EditProfilePopup/EditProfilePopup";
+import AddPlacePopup from "./components/Popup/components/AddPlacePopup/AddPlacePopup";
 
 export default function Main({ onOpenPopup }) {
   const { currentUser, handleCardLike, handleCardDelete, cards } =
@@ -21,7 +21,7 @@ export default function Main({ onOpenPopup }) {
             src={currentUser?.avatar || userPic}
             alt="User picture"
             onClick={() =>
-              onOpenPopup({ title: "Editar Imagem", children: <EditImage /> })
+              onOpenPopup({ title: "Editar Imagem", children: <EditAvatarPopup /> })
             }
           />
         </div>
@@ -36,7 +36,7 @@ export default function Main({ onOpenPopup }) {
               onClick={() =>
                 onOpenPopup({
                   title: "Editar Perfil",
-                  children: <EditProfile />,
+                  children: <EditProfilePopup />,
                 })
               }
             >
@@ -56,7 +56,7 @@ export default function Main({ onOpenPopup }) {
         <button
           className="user__add-button"
           onClick={() =>
-            onOpenPopup({ title: "Novo Cartão", children: <NewCard /> })
+            onOpenPopup({ title: "Novo Cartão", children: <AddPlacePopup /> })
           }
         >
           <img

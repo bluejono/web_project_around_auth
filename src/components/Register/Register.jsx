@@ -38,12 +38,12 @@ function Register({ onRegister }) {
               onChange={(event) => setPassword(event.target.value)}
               required
             />
+            <button className="auth__button" type="submit">
+              Cadastrar
+            </button>
           </form>
         </div>
         <div className="auth__footer">
-          <button className="auth__button" type="submit" onClick={handleSubmit}>
-            Cadastrar
-          </button>
           <p className="auth__link-text">
             Já é um membro?{" "}
             <Link className="auth__link" to="/signin">

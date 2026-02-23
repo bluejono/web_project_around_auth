@@ -37,7 +37,7 @@ npm run dev
 
 ## Link GitHub Pages
 
-[Around the U.S.](https://bluejono.github.io/web_project_around_auth)
+[Around the U.S.](https://github.com/bluejono/web_project_around_auth)
 
 ## Demonstração
 
